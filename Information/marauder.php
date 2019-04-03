@@ -1,5 +1,50 @@
+<!DOCTYPE HTML>
+
+<?php
+    define('DB_SERVER', 'localhost');
+    define('DB_USERNAME', 'checkmateadmin');
+    define('DB_PASSWORD', 'checkmate1');
+    define('DB_DATABASE', 'TCMDB');
+    $db = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+    if ($db -> connect_errno) {
+      //printf("Connection Failed: %\n", $myssqli->connect_error);
+    }
+    if (isset($_POST['submit'])) {
+
+        $UID = mysqli_real_escape_string($db, $_POST['uid']);
+        $PW = mysqli_real_escape_string($db, $_POST['pw']);
+
+        // Check if inputis Empty
+        if (empty($UID) || empty($PW)) {
+            exit();
+        } else {
+          $sql = "SELECT * from tcm_users_marauder where users_login_name = '$UID'";
+          $result = $db->query($sql);
+          $resultcheck = $result->$numrows;
+          $data = array();
+          if (($resultcheck) < 1 ) {
+            exit();
+          } else {
+            while ($result->fetch_assoc($result)) {
+              $data[] = ($numrows["users_login_name"]);
+              $data[] = ($numrows["users_login_password"]);
+            }
+          }
+        }
+    }
+
+?>
+
 <html>
 <head>
+  <body>
+  <form method ="post" action="marauder.php">
+      <input type="text" placeholder="Username/Email:"name="username"><br/>
+      <input type="password" placeholder="Password:" name="password"><br/>
+      <input type="submit" value="Login">
+  </form>
+  </body>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {

@@ -2,21 +2,30 @@
 <head>
   <title>Homepage</title>
   <meta charset="utf-8">
+  <!--
   <style> body {background-image: url("https://img.memecdn.com/you-amp-039-ve-just-activated-my-trap-card_fb_4015157.jpg");}</style>
+  -->
 </head>
 <body>
-  <div style="color: white;">
+  <div >
       <p >Index Page</p>
       <h1> CHECKMATE COMPUTING WEB INDEX </h1>
+      <form method ="post" action="tcm_login.php">
+          <input type="text" placeholder="Username:"name="username"><br/>
+          <input type="password" placeholder="Password:" name="password"><br/>
+          <input type="submit" value="Login"><span> or </span>
+          <button type="button" value="Register" onclick="window.location.href = 'tcm_register.php';">Register</button>
+      </form>
+
       <ul>
         <!--<li><a href="index.html">Index</a></li>-->
-        <li><a style="background-color: white; color: black;" href="Information/marauder.html">Marauder</a></li>
+        <li><a style="background-color: white; color: black;" href="Information/Jordan.html">Jordan</a></li>
+        <li><a style="background-color: white; color: black;" href="Information/marauder.php">Marauder</a></li>
         <li><a style="background-color: white; color: black;" href="Information/cnjoku96.html">cnjoku96</a></li>
-        <li><a style="background-color: white; color: black;" href="Information/test.html">Jordan</a></li>
-        <li><a style="background-color: white; color: black;" href="Information/about.html">About</a></li>
-        <li><a style="background-color: white; color: black;" href="Information/fap.html">Fap</a></li>
-        <li><a style="background-color: white; color: black;" href="Information/db_config.php">DB CONFIG</a></li>
+        <li><a style="background-color: white; color: black;" href="Information/toxic.html">Toxic</a></li>
+        <!--<li><a style="background-color: white; color: black;" href="Information/db_config.php">DB CONFIG</a></li>-->
       </ul>
+      <p> No <b>NSFW, NFSL, or shitposts</b> on this website anymore. Click <a href="Information/about.html">here</a> to learn more.</p>
     </div>
 </body>
 </html>
