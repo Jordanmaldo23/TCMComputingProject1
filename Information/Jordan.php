@@ -1,3 +1,4 @@
+<?php include '../session_check.php';?>
 <html lang="en">
   <head>
     <title>Jordan</title>
@@ -71,7 +72,7 @@
       <div id = "bodyNav">
         <a class = "active" href="test.html">Test Page</a>
         <a href="https://leagueoflegends.com">Play League Here</a>
-        <a href="../index.html">Index</a>
+        <a href="../index.php">Index</a>
       </div>
       <div id = "bodyHeader">
         <h3> 90s Web Page </h3>

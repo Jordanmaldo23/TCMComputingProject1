@@ -6,39 +6,40 @@
     define('DB_PASSWORD', 'checkmate1');
     define('DB_DATABASE', 'TCMDB');
     $db = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-
+    $printuser="";
     if ($db -> connect_errno) {
       //printf("Connection Failed: %\n", $myssqli->connect_error);
     }
-    if (isset($_POST['submit'])) {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+      $UID = $db->real_escape_string($_POST['username']);
+      $PW = $db->real_escape_string($_POST['password']);
 
-        $UID = mysqli_real_escape_string($db, $_POST['uid']);
-        $PW = mysqli_real_escape_string($db, $_POST['pw']);
-
-        // Check if inputis Empty
-        if (empty($UID) || empty($PW)) {
-            exit();
+        $sql = "SELECT users_login_password from tcm_users_marauder where users_login_name = '$UID'";
+        $result = $db->query($sql);
+        $resultcheck = $result->num_rows;
+        if (($resultcheck) < 1 ) {
+          echo "Error wrong Username/pw <br/>";
         } else {
-          $sql = "SELECT * from tcm_users_marauder where users_login_name = '$UID'";
-          $result = $db->query($sql);
-          $resultcheck = $result->$numrows;
-          $data = array();
-          if (($resultcheck) < 1 ) {
-            exit();
-          } else {
-            while ($result->fetch_assoc($result)) {
-              $data[] = ($numrows["users_login_name"]);
-              $data[] = ($numrows["users_login_password"]);
-            }
+          while ($array=$result->fetch_assoc()) {
+              if($PW == $array['users_login_password']){
+                session_start();
+                $printuser = $UID;
+                $_SESSION['uid'] = $UID;
+              //  header( "refresh:1; url=Information/marauder.php" );
+              }
           }
         }
-    }
 
+      }
+    $db->close();
 ?>
 
 <html>
 <head>
   <body>
+    <p>
+      <?php if ($printuser != "") {echo "You're IN<br/>" . $printuser;} ?>
+  </p>
   <form method ="post" action="marauder.php">
       <input type="text" placeholder="Username/Email:"name="username"><br/>
       <input type="password" placeholder="Password:" name="password"><br/>
@@ -161,7 +162,7 @@ body {
 
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="../index.html">Index</a>
+      <a href="../index.php">Index</a>
       <a href="#">Classes</a>
       <a href="#">Weapons</a>
       <a href="#">Equipment</a>
