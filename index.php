@@ -9,19 +9,48 @@
 </head>
 <body>
   <div>
-      <p >Index Page</p>
       <h1> CHECKMATE COMPUTING WEB INDEX </h1>
-      <?php include 'tcm_login.php';?>
+      <?php
+        include('db_config.php');
+        if($_SERVER['REQUEST_METHOD'] == "POST") {
+          $error = "";
+          $user = $db->real_escape_string($_POST['username']);
+          $pass = $db->real_escape_string($_POST['password']);
+          $sql = "SELECT DISTINCT tcm_users_password,tcm_users_admin from tcmdb.tcm_users where tcm_users_username = '$user'";
+          $result = $db->query($sql);
+          if( $result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+              if(password_verify($pass, $row['tcm_users_password']) == true){
+                //echo "Login Success </br>";
+                session_start();
+                $_SESSION['username'] = $user;
+                $_SESSION['admin_check'] = $row['tcm_users_admin'];
+                header( "refresh:0;url=Main/Jordan.php" );
+              }
+              else {
+                $error = "Invalid Username or Password";
+              }
+            }
+          } else {
+            $error = "Invalid Username or Password.";
+            //echo $error;
+            //header( "refresh:3;url=index.html" );
+          }
+        }
+        //echo "With username: " . $_SESSION['username'] . "</br> Admin Status: " . $_SESSION['admin_check'];
+        $db->close();
+        //if(session_status() == 2){session_destroy();} //temporary destory session to not save cookie.
+       ?>
       <form method ="post" action="">
-          <input type="text" placeholder="Username:"name="username"><br/>
-          <input type="password" placeholder="Password:" name="password"><br/>
+          <input type="text" placeholder="Username:"name="username"></br>
+          <input type="password" placeholder="Password:" name="password"></br>
           <input type="submit" value="Login"><span> or </span>
-          <button type="button" value="Register" onclick="window.location.href = 'tcm_register.php';">Register</button>
+          <button type="button" value="Register" onclick="window.location.href = 'register.php';">Register</button>
       </form>
       <p style="color: #cc0000;"><?php if(empty($error)==false){echo $error;}?><p>
       <ul>
         <!--<li><a href="index.html">Index</a></li>-->
-        <li><a href="Information/Jordan.php">Jordan</a></li>
+        <li><a href="Main/Jordan.php">Jordan</a></li>
         <li><a href="marauderwebsite/marauder.php">Marauder</a></li>
         <li><a href="Information/cnjoku96.html">cnjoku96</a></li>
         <li><a href="Information/toxic.html">Toxic</a></li>
