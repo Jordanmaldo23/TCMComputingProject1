@@ -16,7 +16,7 @@
           $error = "";
           $user = $db->real_escape_string($_POST['username']);
           $pass = $db->real_escape_string($_POST['password']);
-          $sql = "SELECT DISTINCT tcm_users_password,tcm_users_admin from tcmdb.tcm_users where tcm_users_username = '$user'";
+          $sql = "SELECT DISTINCT tcm_users_password,tcm_users_admin,tcm_users_id from tcmdb.tcm_users where tcm_users_username = '$user'";
           $result = $db->query($sql);
           if( $result->num_rows > 0){
             while($row = $result->fetch_assoc()){
@@ -25,6 +25,7 @@
                 session_start();
                 $_SESSION['username'] = $user;
                 $_SESSION['admin_check'] = $row['tcm_users_admin'];
+                $_SESSION['id'] = $row['tcm_users_id'];
                 header( "refresh:0;url=Main/Jordan.php" );
               }
               else {
@@ -53,7 +54,7 @@
         <li><a href="Main/Jordan.php">Jordan</a></li>
         <li><a href="marauderwebsite/marauder.php">Marauder</a></li>
         <li><a href="Information/cnjoku96.html">cnjoku96</a></li>
-        <li><a href="Information/toxic.html">Toxic</a></li>
+        <li><a href="Information/toxic.php">Toxic</a></li>
         <!--<li><a style="background-color: white; color: black;" href="Information/db_config.php">DB CONFIG</a></li>-->
       </ul>
       <p> No <b>NSFW, NFSL, or shitposts</b> on this website anymore. Click <a href="Information/about.html">here</a> to learn more.</p>

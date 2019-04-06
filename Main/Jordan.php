@@ -72,6 +72,7 @@
       <div id = "bodyNav">
         <a class = "active" href="test.html">Test Page</a>
         <a href="https://leagueoflegends.com">Play League Here</a>
+          <a href="toxic.php">Toxic!</a>
         <a href="../index.php">Index</a>
       </div>
       <div id = "bodyHeader">

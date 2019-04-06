@@ -1,3 +1,4 @@
+<?php include '../session_check.php';?>
 <html lang="en">
   <head>
     <style>
@@ -68,7 +69,7 @@
       <p id = "textHere"></p>
       <p>This page was created by <b>Wendell Mardenborough</b>. Test 2019.</p>
       <a href="https://tenor.com/">Content Here</a></br>
-      <a href="../index.html">Index</a></br>
+      <a href="../index.php">Index</a></br>
       <img src= "https://media.giphy.com/media/20wDWskVLfE08/giphy.gif" alt="dancing frog" style=width:200px;height:200px;Border:1;></br>
       <p id = "kek"></p>
       <p id = "grr"></p>
