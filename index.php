@@ -26,7 +26,7 @@
                 $_SESSION['username'] = $user;
                 $_SESSION['admin_check'] = $row['tcm_users_admin'];
                 $_SESSION['id'] = $row['tcm_users_id'];
-                header( "refresh:0;url=Main/Jordan.php" );
+                header( "refresh:0;url=Main/Main.php" );
               }
               else {
                 $error = "Invalid Username or Password";
@@ -51,7 +51,7 @@
       <p style="color: #cc0000;"><?php if(empty($error)==false){echo $error;}?><p>
       <ul>
         <!--<li><a href="index.html">Index</a></li>-->
-        <li><a href="Main/Jordan.php">Jordan</a></li>
+        <li><a href="Main/Main.php">Main</a></li>
         <li><a href="marauderwebsite/marauder.php">Marauder</a></li>
         <li><a href="Information/cnjoku96.html">cnjoku96</a></li>
         <li><a href="Information/toxic.php">Toxic</a></li>

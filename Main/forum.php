@@ -1,12 +1,11 @@
 <?php include '../session_check.php';?>
 <html lang="en">
   <head>
-    <title>Jordan</title>
+    <title>Main</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body {
-        //background-image: url("https://media.thetab.com/blogs.dir/90/files/2019/01/animal.jpeg");
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -27,7 +26,7 @@
         color: black;
       }
       #bodyNav a.active {
-        background-color: red;
+        background-color: #8c2d28;
         color: white;
       }
       #bodyHeader {
@@ -50,41 +49,25 @@
         padding: 1px;
         text-align: center;
       }
-      @keyframes example {
-        0%   {background-color:red; right:-500px;top:0px;}
-        25%  {background-color:yellow; right:500px;top:0px;}
-        50%  {background-color:blue; right:500px;top:400px;}
-        75%  {background-color:green; right:-500px;top:400px;}
-        100% {background-color:red; right:-500px;top:0px;}
-      }
-      img {
-        width: 300px;
-        height: 300px;
-        position: relative;
-        background-color: red;
-        animation-name: example;
-        animation-duration: 4s;
-        animation-iteration-count: 100;
-      }
     </style>
   </head>
   <body>
       <div id = "bodyNav">
-        <a class = "active" href="test.html">Test Page</a>
-        <a href="https://leagueoflegends.com">Play League Here</a>
-          <a href="toxic.php">Toxic!</a>
-        <a href="../index.php">Index</a>
+        <a href="main.php">Main Page</a>
+        <a class = "active" href="">TCM Forum</a>
+        <a href="profile.php"><?php echo $_SESSION['username'];?>'s Profile</a>
+        <a href="toxic.php">Toxic's Page</a>
+        <a href="settings.php">Settings</a>
+        <a href="../index.php">Logout</a>
       </div>
       <div id = "bodyHeader">
-        <h3> 90s Web Page </h3>
+        <h3> TCM Forum </h3>
       </div>
       <div id = bodyBody>
-        <p>Hello World!</p>
-        <img src="">
         <p id = "textHere"></p>
       </div>
       <div id = "bodyFooter">
-        <p>This page was created by <b>Jordan Maldonado</b>. Test 2019.</p>
+        <p>This page was created by <b>Jordan Maldonado and Team Checkmate</b>.&copy; Test 2019.</p>
       </div>
       <script>
         var array = ["0","1","2","3"];
@@ -96,7 +79,7 @@
           }
           if(i % 2 != 0){output += "</br>";}
         }
-        document.getElementById("textHere").innerHTML = output;
+        //document.getElementById("textHere").innerHTML = output;
       </script>
   </body>
 </html>
