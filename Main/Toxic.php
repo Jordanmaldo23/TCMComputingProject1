@@ -52,7 +52,7 @@
       <a href="main.php">Main</a>
       <a href="https://tenor.com/">Content Here</a>
       <a href="../index.php">Index</a>
-      <a href="reddit.com">News</a>
+      <a href="https://www.reddit.com/r/news/">News</a>
       <a href="https://www.youtube.com/watch?v=OhLfotgl6A4">Truth</a>
     </div>
     <div id = bodyBody>

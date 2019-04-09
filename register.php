@@ -22,7 +22,8 @@
           if($pass == $pass_c){
             if( $result->num_rows < 1){
               $pass = password_hash($pass,PASSWORD_DEFAULT);
-              $sql = "INSERT INTO tcm_users (tcm_users_username,tcm_users_password,tcm_users_fname,tcm_users_lname,tcm_users_email,tcm_users_profile,tcm_users_admin,tcm_users_createdon)
+              $sql = "INSERT INTO tcm_users
+              (tcm_users_username,tcm_users_password,tcm_users_fname,tcm_users_lname,tcm_users_email,tcm_users_profile,tcm_users_admin,tcm_users_createdon)
               values ('".$user."','".$pass."','".$fname."','".$lname."','".$email."','".$profile."',0,now())";
               if($db->query($sql) == true){
                 $success = "Account creation successful, forwarding to login page.";

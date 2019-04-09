@@ -54,7 +54,7 @@
         <li><a href="Main/Main.php">Main</a></li>
         <li><a href="marauderwebsite/marauder.php">Marauder</a></li>
         <li><a href="Information/cnjoku96.html">cnjoku96</a></li>
-        <li><a href="Information/toxic.php">Toxic</a></li>
+        <li><a href="Main/toxic.php">Toxic</a></li>
         <!--<li><a style="background-color: white; color: black;" href="Information/db_config.php">DB CONFIG</a></li>-->
       </ul>
       <p> No <b>NSFW, NFSL, or shitposts</b> on this website anymore. Click <a href="Information/about.html">here</a> to learn more.</p>

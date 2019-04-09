@@ -64,8 +64,12 @@
         <h3> TCM Main Page </h3>
       </div>
       <div id = bodyBody>
-        <iframe width="799" height="599" src="https://www.youtube.com/embed/jhUkGIsKvn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p id = "textHere"></p>
+        </br>
+        <img src="https://media.thetab.com/blogs.dir/90/files/2019/01/animal.jpeg"></img></br>
+        <audio controls autoplay loop>
+          <source src="media/Carl Douglas - Kung fu fighting.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
       </div>
       <div id = "bodyFooter">
         <p>This page was created by <b>Jordan Maldonado and Team Checkmate</b>.&copy; Test 2019.</p>
