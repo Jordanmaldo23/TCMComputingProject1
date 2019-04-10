@@ -7,7 +7,7 @@
   <div>
       <h1> Account Registration </h1>
       <?php
-        include('db_config.php');
+        include 'db_config.php';
         if($_SERVER['REQUEST_METHOD'] == "POST") {
           $error = ""; $success = "";
           $user = $db->real_escape_string($_POST['username']);

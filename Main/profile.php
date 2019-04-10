@@ -55,7 +55,7 @@
       <div id = "bodyNav">
         <a href="main.php">Main Page</a>
         <a href="forum.php">TCM Forum</a>
-        <a class = "active" href=""><?php echo $_SESSION['username'];?>'s Profile</a>
+        <a class = "active" href="profile.php"><?php echo $_SESSION['username'];?>'s Profile</a>
         <a href="toxic.php">Toxic's Page</a>
         <a href="settings.php">Settings</a>
         <a href="../index.php">Logout</a>

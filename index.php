@@ -11,7 +11,7 @@
   <div>
       <h1> CHECKMATE COMPUTING WEB INDEX </h1>
       <?php
-        include('db_config.php');
+        include 'db_config.php';
         if($_SERVER['REQUEST_METHOD'] == "POST") {
           $error = "";
           $user = $db->real_escape_string($_POST['username']);

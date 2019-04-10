@@ -53,7 +53,7 @@
   </head>
   <body>
       <div id = "bodyNav">
-        <a class = "active" href="">Main Page</a>
+        <a class = "active" href="main.php">Main Page</a>
         <a href="forum.php">TCM Forum</a>
         <a href="profile.php"><?php echo $_SESSION['username'];?>'s Profile</a>
         <a href="toxic.php">Toxic's Page</a>
