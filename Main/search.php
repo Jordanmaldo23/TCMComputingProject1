@@ -56,10 +56,10 @@
     </head>
     <body>
         <div id = "bodyNav">
-          <a href="main.php">Main Page</a>
-          <a href="forum.php">TCM Forum</a>
-          <a class = "active" href="search.php">Search</a>
-          <a href="settings.php">Settings</a>
+          <a href="main.php">News</a>
+          <a href="forum.php">Forum</a>
+          <a class = "active" href="search.php">Profile Search</a>
+          <a href="settings.php">Profile Settings</a>
           <a href="../index.php">Logout</a>
         </div>
         <div id = "bodyHeader">
@@ -71,12 +71,12 @@
             <label>Username: </label><input type="text" name="name"></br>
             <input type="submit" value="Search">
           </form>
-          <table id = "newTable">
-            <th></th><th></th><th></th><th></th>
+          <table id="newTable">
+            <th></th><th></th><th></th>
           </table>
         </div>
         <div id = "bodyFooter">
-          <p>This page was created by <b>Marauder</b>. Test 2019.</p>
+          <p>This page was created by <b>Team Checkmate</b>.&copy; Test 2019.</p>
         </div>
         <?php
           if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['name']) && $_GET['name'] != ""){
@@ -111,7 +111,7 @@
                 cell.innerHTML = "<img src=\""+newArray[i]+"\"alt=profile_picture height=75 width =75></img>";
               }
               else if(y == 1){
-                var str = "<a href=\"profile.php?uid="+newArray[i]+"&name=";
+                var str = "<a target =_blank href=\"profile.php?uid="+newArray[i]+"&name=";
                 i++;
                 str += ""+newArray[i]+"\">"+newArray[i]+"</a>";
                 cell.innerHTML = str;

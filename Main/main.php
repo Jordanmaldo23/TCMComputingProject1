@@ -53,10 +53,10 @@
   </head>
   <body>
       <div id = "bodyNav">
-        <a class = "active" href="main.php">Main Page</a>
-        <a href="forum.php">TCM Forum</a>
-        <a href="search.php">Search</a>
-        <a href="settings.php">Settings</a>
+        <a class = "active" href="main.php">News</a>
+        <a href="forum.php">Forum</a>
+        <a href="search.php">Profile Search</a>
+        <a href="settings.php">Profile Settings</a>
         <a href="../index.php">Logout</a>
       </div>
       <div id = "bodyHeader">
@@ -71,7 +71,7 @@
         </audio>
       </div>
       <div id = "bodyFooter">
-        <p>This page was created by <b>Jordan Maldonado and Team Checkmate</b>.&copy; Test 2019.</p>
+        <p>This page was created by <b>Team Checkmate</b>.&copy; Test 2019.</p>
       </div>
       <script>
         var array = ["0","1","2","3"];

@@ -1,7 +1,7 @@
 <?php
   include '../session_check.php';
   include '../db_config.php';
-  $age=$fname=$lname=$location=$email=$signature=$bio=$pic="";
+  $age=$fname=$lname=$location=$email=$signature=$bio=$pic=$dname="";
   $temp = $_SESSION['id'];
   $sql = "SELECT DISTINCT * from tcm_profiles where tcm_users_id =" . $_SESSION['id'];
   $result = $db->query($sql);
@@ -79,10 +79,10 @@
 
   <body>
       <div id = "bodyNav">
-        <a href="main.php">Main Page</a>
-        <a href="forum.php">TCM Forum</a>
-        <a href="search.php">Search</a>
-        <a class = "active" href="settings.php">Settings</a>
+        <a href="main.php">News</a>
+        <a href="forum.php">Forum</a>
+        <a href="search.php">Profile Search</a>
+        <a class = "active" href="settings.php">Profile Settings</a>
         <a href="../index.php">Logout</a>
       </div>
       <div id = "bodyHeader">
@@ -109,7 +109,7 @@
         </form>
       </div>
       <div id = "bodyFooter">
-        <p>This page was created by <b>Jordan Maldonado and Team Checkmate © Test 2019.</b> Test 2019.</p>
+        <p>This page was created by <b>Team Checkmate</b>.&copy; Test 2019.</p>
       </div>
 
       <!--script runs if they hit submit(php script updates information in the database with user input)-->
