@@ -55,8 +55,7 @@
       <div id = "bodyNav">
         <a href="main.php">Main Page</a>
         <a href="forum.php">TCM Forum</a>
-        <a class = "active" href="profile.php"><?php echo $_SESSION['username'];?>'s Profile</a>
-        <a href="toxic.php">Toxic's Page</a>
+        <a href="search.php">Search</a>
         <a href="settings.php">Settings</a>
         <a href="../index.php">Logout</a>
       </div>
@@ -64,8 +63,8 @@
         <h3> Profile Page </h3>
       </div>
       <div id = bodyBody>
-        <p>Hello World!</p>
-        <img src="">
+        <p>Under Construction</p>
+        <img src="https://media.giphy.com/media/11XXM83FuF6opO/giphy.gif">
         <p id = "textHere"></p>
       </div>
       <div id = "bodyFooter">

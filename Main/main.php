@@ -55,8 +55,7 @@
       <div id = "bodyNav">
         <a class = "active" href="main.php">Main Page</a>
         <a href="forum.php">TCM Forum</a>
-        <a href="profile.php"><?php echo $_SESSION['username'];?>'s Profile</a>
-        <a href="toxic.php">Toxic's Page</a>
+        <a href="search.php">Search</a>
         <a href="settings.php">Settings</a>
         <a href="../index.php">Logout</a>
       </div>
@@ -65,8 +64,8 @@
       </div>
       <div id = bodyBody>
         </br>
-        <img src="https://media.thetab.com/blogs.dir/90/files/2019/01/animal.jpeg"></img></br>
-        <audio controls autoplay loop>
+        <img src="media/rushmonkey.png"></img></br>
+        <audio controls>
           <source src="media/Carl Douglas - Kung fu fighting.mp3" type="audio/mpeg">
           Your browser does not support the audio tag.
         </audio>

@@ -49,7 +49,7 @@
   </head>
   <body style="background-image:url('https://media1.tenor.com/images/418c37507106f319bf5a1a3d1e8e1922/tenor.gif?itemid=4625114');">
     <div id = "bodyNav">
-      <a href="main.php">Main</a>
+      <a href="../index.php">Main</a>
       <a href="https://tenor.com/">Content Here</a>
       <a href="../index.php">Index</a>
       <a href="https://www.reddit.com/r/news/">News</a>
